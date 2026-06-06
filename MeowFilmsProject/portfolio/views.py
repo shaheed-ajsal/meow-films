@@ -10,6 +10,7 @@ def index(value):
     if value.method == 'POST':
         name = value.POST.get('client-name')
         email = value.POST.get('email')
+        phone = value.POST.get('phone')  # <-- GET PHONE NUMBER
         wedding_date = value.POST.get('wedding-date')
         message = value.POST.get('message')
 
@@ -21,6 +22,7 @@ def index(value):
         inquiry = WeddingInaquiry(
             name=name,
             email=email,
+            phone=phone,
             wedding_date=wedding_date,
             message=message
         )
